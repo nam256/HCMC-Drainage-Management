@@ -1,0 +1,48 @@
+🧭 KẾ HOẠCH CHIA TỪNG BƯỚC ĐỂ LÀM DỰ ÁN WEB GIS (Laravel + Leaflet + ArcGIS + PostGIS)
+
+
+Mật khẩu: postgres123
+Port: 5432
+Tick postgis 3.5
+Pgamind4
+✅ GIAI ĐOẠN 2: TẠO DỮ LIỆU BẢN ĐỒ
+Bước	Công việc	Mục tiêu
+2.1	Dùng ArcGIS: số hoá bản vẽ hoặc import file CAD	Chuẩn hóa dữ liệu từ đầu vào
+2.2	Gán hệ tọa độ chuẩn EPSG:4326	Đảm bảo dữ liệu hiển thị đúng vị trí
+2.3	Gắn thông tin thuộc tính cho từng đối tượng	Có dữ liệu mô tả
+2.4	Export ra file GeoJSON	Sẵn sàng import vào Laravel/PostGIS
+
+✅ GIAI ĐOẠN 3: TẠO CSDL VÀ API
+Bước	Công việc	Mục tiêu
+3.1	Tạo bảng cong_trinh có cột geometry	Lưu dữ liệu không gian
+3.2	Import GeoJSON mẫu từ ArcGIS vào PostGIS	Có dữ liệu mẫu
+3.3	Laravel: Tạo API /api/cong-trinh (GET)	Trả về dữ liệu GeoJSON
+3.4	Laravel: Tạo API /api/cong-trinh (POST)	Nhận điểm mới từ frontend
+3.5	Laravel: Upload file đính kèm (ảnh, PDF)	Gắn file vào thuộc tính công trình
+3.6	Laravel: Phân quyền API (admin, user)	Ai được sửa/xem
+
+✅ GIAI ĐOẠN 4: FRONTEND TƯƠNG TÁC BẢN ĐỒ
+Bước	Công việc	Mục tiêu
+4.1	Dùng Leaflet hiển thị Tile Layer (OSM)	Có bản đồ nền
+4.2	Gọi API ➜ hiển thị dữ liệu GeoJSON	Hiển thị các công trình
+4.3	Tích hợp Leaflet.draw	Cho phép vẽ điểm, vùng mới
+4.4	Gửi dữ liệu về API ➜ lưu vào DB	Tạo mới công trình từ bản đồ
+4.5	Tìm kiếm theo tên/toạ độ	Tương tác người dùng nâng cao
+4.6	Hiển thị popup thông tin chi tiết	Người dùng xem được nội dung
+
+✅ GIAI ĐOẠN 5: QUẢN LÝ VÀ BÁO CÁO
+Bước	Công việc	Mục tiêu
+5.1	Tạo giao diện Admin CRUD toàn bộ công trình	Quản lý toàn hệ thống
+5.2	Giao diện user (chỉ xem)	Hiển thị công khai
+5.3	Ghi log (nâng cao)	Quản lý hoạt động người dùng
+5.4	Vẽ sơ đồ hệ thống / chức năng (DFD, UseCase, ERD)	Trình bày báo cáo với thầy
+5.5	Viết tài liệu: kiến trúc hệ thống, hướng dẫn sử dụng	Chuẩn bị báo cáo nộp / demo
+
+🗓️ GỢI Ý TIẾN ĐỘ (nếu bạn có 2-4 tuần làm)
+Tuần	Việc nên hoàn thành
+Tuần 1	Giai đoạn 1 + 2
+Tuần 2	Giai đoạn 3
+Tuần 3	Giai đoạn 4
+Tuần 4	Giai đoạn 5 + Fix lỗi + Demo thử
+
+📘
